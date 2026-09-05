@@ -13,7 +13,7 @@
         <MicaBackdrop />
     </Window.SystemBackdrop>
 
-    <Grid x:Name="RootGrid">
+    <Grid x:Name="RootGrid" Background="#bdbdcb">
         <Grid.Clip>
             <RectangleGeometry x:Name="MainClip" />
         </Grid.Clip>
@@ -31,8 +31,8 @@
             <!-- 🟢 FIRST SCREEN (main) -->
             <Grid Grid.Column="0" x:Name="FirstScreen">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="20">
-                    <TextBlock Text="Cryptographer" FontSize="42" Foreground="White" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Encrypt &amp; Decrypt your messages" FontSize="16" Foreground="#CCCCCC" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Cryptographer" FontSize="42" Foreground="black" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Encrypt &amp; Decrypt your messages" FontSize="16" Foreground="Black" HorizontalAlignment="Center"/>
                     <Button x:Name="EncryptButton" Content="🔐 Encrypt" Width="260" Height="55"/>
                     <Button x:Name="DecryptButton" Content="🔓 Decrypt" Width="260" Height="55"/>
                     <Button x:Name="LanguageButton" Content="🌍 Language" Width="260" Height="55"/>
@@ -55,7 +55,7 @@
                     <Button Content="ℹ About" x:Name="SecondAboutButton" Width="200" Height="45"/>
                 </StackPanel>
 
-                <Grid Grid.Column="1" Background="#1A1A2E">
+                <Grid Grid.Column="1" Background="#1a242e">
                     <Frame x:Name="ContentFrame" />
                 </Grid>
             </Grid>
