@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="Cryptograph.EncryptPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cryptograph"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Border
+            Background="#1A1A2E"
+            CornerRadius="20"
+            Padding="25"
+            Width="420"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <StackPanel Spacing="15">
+
+                <TextBlock
+                    Text="🔐 Encrypt"
+                    FontSize="28"
+                    FontWeight="SemiBold"
+                    HorizontalAlignment="Center"
+                    Foreground="White"/>
+
+                <TextBox
+                    x:Name="MessageTextBox"
+                    PlaceholderText="Enter message"
+                    Height="100"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    Background="#2A2A3A"
+                    Foreground="White"/>
+
+                <TextBox
+                    x:Name="KeyTextBox"
+                    PlaceholderText="Enter key"
+                    Height="40"
+                    Background="#2A2A3A"
+                    Foreground="White"/>
+
+                <Button
+                    x:Name="EncryptButton"
+                    Content="Encrypt"
+                    Height="50"
+                    Background="#6C63FF"
+                    Foreground="White"
+                    CornerRadius="12"
+                    FontSize="16"/>
+
+                <TextBox
+                    x:Name="ResultTextBox"
+                    PlaceholderText="Encrypted result (Base64)"
+                    Height="100"
+                    TextWrapping="Wrap"
+                    IsReadOnly="True"
+                    Background="#2A2A3A"
+                    Foreground="White"/>
+
+                <Button
+                    x:Name="CopyButton"
+                    Content="Copy"
+                    Height="45"
+                    Background="#3A86FF"
+                    Foreground="White"
+                    CornerRadius="12"
+                    FontSize="14"/>
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</Page>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Cryptograph.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cryptograph"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Cryptograph">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid x:Name="RootGrid">
+        <Grid.Clip>
+            <RectangleGeometry x:Name="MainClip" />
+        </Grid.Clip>
+
+        <Grid x:Name="MainContainer" Width="1000">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="MainTransform" />
+            </Grid.RenderTransform>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- 🟢 FIRST SCREEN (main) -->
+            <Grid Grid.Column="0" x:Name="FirstScreen">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="20">
+                    <TextBlock Text="Cryptographer" FontSize="42" Foreground="White" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Encrypt &amp; Decrypt your messages" FontSize="16" Foreground="#CCCCCC" HorizontalAlignment="Center"/>
+                    <Button x:Name="EncryptButton" Content="🔐 Encrypt" Width="260" Height="55"/>
+                    <Button x:Name="DecryptButton" Content="🔓 Decrypt" Width="260" Height="55"/>
+                    <Button x:Name="LanguageButton" Content="🌍 Language" Width="260" Height="55"/>
+                    <Button x:Name="AboutButton" Content="ℹ About" Width="260" Height="55"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- 🔵 SECOND SCREEN (with left menu) -->
+            <Grid Grid.Column="1" x:Name="SecondScreen">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="15">
+                    <Button Content="⬅ Back" x:Name="BackButton" Width="200" Height="45"/>
+                    <Button Content="🔐 Encrypt" x:Name="SecondEncryptButton" Width="200" Height="45"/>
+                    <Button Content="🔓 Decrypt" x:Name="SecondDecryptButton" Width="200" Height="45"/>
+                    <Button Content="🌍 Language" x:Name="SecondLanguageButton" Width="200" Height="45"/>
+                    <Button Content="ℹ About" x:Name="SecondAboutButton" Width="200" Height="45"/>
+                </StackPanel>
+
+                <Grid Grid.Column="1" Background="#1A1A2E">
+                    <Frame x:Name="ContentFrame" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>   

@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Cryptograph.DecryptPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cryptograph"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="20" Width="400">
+            <TextBlock Text="Decrypt" FontSize="28" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="White"/>
+            <TextBox x:ConnectionId='2' x:Name="MessageTextBox" PlaceholderText="Enter Base64 encrypted message" Height="100" TextWrapping="Wrap" AcceptsReturn="True" Background="#2A2A3A" Foreground="White"/>
+            <TextBox x:ConnectionId='3' x:Name="KeyTextBox" PlaceholderText="Enter key (string)" Height="40" Background="#2A2A3A" Foreground="White"/>
+            <Button x:ConnectionId='4' x:Name="DecryptButton" Content="Decrypt" Width="200" Height="50" Background="#6C63FF" Foreground="White" CornerRadius="12" FontSize="16"/>
+            <TextBox x:ConnectionId='5' x:Name="ResultTextBox" PlaceholderText="Result" Height="100" TextWrapping="Wrap" IsReadOnly="True" Background="#2A2A3A" Foreground="White"/>
+            <Button x:ConnectionId='6' x:Name="CopyButton" Content="Copy" Width="200" Height="45" Background="#3A86FF" Foreground="White" CornerRadius="12" FontSize="14"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

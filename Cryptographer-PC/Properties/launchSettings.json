@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Cryptograph (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Cryptograph (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
