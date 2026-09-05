@@ -5,8 +5,8 @@
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/4cc16730-4730-40e3-ba3e-f07d3ec61b6d" />
 </div>
 
-The project is usable but still under development.
 
+The project is currently under development. Future updates will introduce a hybrid encryption method and a robust, high-security cryptographic algorithm.
 
 
 **Support**
